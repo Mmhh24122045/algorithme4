@@ -1,0 +1,25 @@
+fonction palindrom(str : string):boolean
+var
+pal:boolean;
+i:integer;
+begin
+for i from 0 to str.length/2 step do
+if (str[i] = str[str.length-i-1])
+pal:=true;
+else
+pal:=false;
+end if
+end for
+write (pal)
+
+algorithm test_palindrom
+var
+str:string;
+begin
+read(str)
+if (palindrom(str)=true)
+write (str, "string is palindrom")
+else
+write (str, "is not palindrom")
+end if
+end
